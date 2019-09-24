@@ -1,0 +1,299 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Brands &middot; Stifaa</title>
+
+    <!-- mobile setup -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="Stifaa" />
+
+    <!-- stylesheet -->
+   <link rel="stylesheet" type ="text/css" href= "{% static 'css/style.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> {% endcomment %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Page description -->
+    <meta name="description" content="Impress your guests!">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="Recipes" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ambiance.vagebond.nl/html/template/recipe/" />
+    <meta property="og:description" content="" />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="Recipes" />
+    <meta name="twitter:description" content="" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="72x72" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" sizes="50x50" href="{% static 'images/png.png' %}">
+
+</head>
+
+<body>
+
+    <!-- Top shadow -->
+    <div class="shadow"></div>
+    <!-- end top shadow -->
+
+    <!-- The splash screen -->
+    <div id="splash">
+        <div class="loader">
+            <img class="splash-logo" src="{% static 'images/png.png' %}" style="width:90px;height:50px;"/>
+            <div class="line"></div>
+        </div>
+    </div>
+    <!-- End of splash screen -->
+      <nav class="social">
+        <ul>  
+           <li><a href="https://www.facebook.com/Tliligroupe/"><span>Facebook</span><i style="text-align:center" class="fa fa-facebook"></i></a></li> 
+           <li><a href="https://www.instagram.com/toutpourchef/"><span>Instagram </span><i class="fa fa-instagram"></i></a></li>
+           <li><a href="https://twitter.com/ChefPour"><span>Twitter</span> <i class="fa fa-twitter"></i></a></li>
+           <li><a href="https://linkedin.com/company/tout-pour-chef"><span>Linkedin </span><i class="fa fa-linkedin"></i></a></li>
+           <li class="mail gly-rotate-180"><a href="http://localhost:8000/contact/" data-transition="slide-to-top"><span>E-mail</span> <i class="fa fa-envelope"></i></a></li>
+           
+        </ul>
+        
+      </nav>
+
+    <div id="wrapper">
+        <!-- main content -->
+          <form  class="language"style="z-index:20" action="{% url 'set_language' %}" method="post">
+          {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" >
+                <select style="width: 50%; color:white;border-color:transparent" class="badge-rounded" name="language">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option style=""class="badge-rounded" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+                <input  type="submit"style="border-color:transparent ;color:white"  class=" badge-rounded" value="Go" />
+        </form>
+        <main>
+            <!-- The header for content -->
+            <header class="detail">
+                <a href="http://localhost:8000/" class="back" data-transition="slide-from-top">
+                    <h1>back</h1>
+                </a>
+                <section>
+                    <h3 class="badge-rounded">{% trans "Brands" %}</h3>
+                    <h1>{% trans "Discover Us!" %}</h1>
+                </section>
+            </header>
+            <!-- end header -->
+            <div class="content-wrap">
+                <div class="content">
+                    <i class="icon bg icon-brand"></i>
+                    <header>
+                        <h2>{% trans "Stifaa's brands" %}</h2>
+                        <h3 class="serif">Barbara Decor</h3>
+                    </header> 
+                    
+                    <figure> 
+
+                        <video autoplay muted  loop width=100% src="{% static 'videos/barbara.mp4' %}" class="gallery-item">
+                            
+
+                            <figcaption>
+                                <i class="icon icon-Plus"></i>
+                            </figcaption>
+                        </video>
+                    </figure>
+                    <p>{% trans "We launched ourselves as 'Barbara' in 1991 with a fascination for chocolate as a raw material. We have been designing and making chocolate decorations ever since." %}</p>
+                    <blockquote>
+                        <p>{% trans "Quality . Technology . Design" %}</p>
+                    </blockquote>
+
+                </div>
+            </div>
+             <!-- Block footer with signature and share links -->
+            <footer class="overlay-dark">
+                <div class="content">
+                 
+                    <section class="share">
+                       
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/barbaraluijckx/" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC2uESf35lgQlRqGUmE3yGkA/videos" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
+                            <li><a href="https://www.instagram.com/barbaraluijckx/" class="social-icon"> <i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/barbara-luijckx?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A3030" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+
+                    </section>
+                </div>
+            </footer>
+            <!-- end footer -->
+            <ul class="link-list">
+                <li>
+                    <a href="http://localhost:8000/brands/saveurs" data-transition="slide-left">
+                        <div class="content">
+                            <img src="{% static 'images/saveurstrans.png' %}" style="width:100px;height:100px; margin-top:0px" >
+                            <h3 style="margin-top:-65px; margin-left:130px;">Saveurs Food</h3>
+                            <i class="next icon icon-RightArrow"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://localhost:8000/brands/aromalux" data-transition="slide-left">
+                        <div class="content">
+                            <img src="{% static 'images/aromalux.png' %}" style="width:100px;height:70px; margin-top:0px" >
+                            <h3 style="margin-top:-60px; margin-left:130px;">Aromalux</h3>
+                            <i class="next icon icon-RightArrow"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div data-remodal-id="modal">
+                <i class="icon bg icon-CommentwithLines"></i>
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h1></h1>
+                <p></p>
+            </div>
+            <footer id="copyright"><h4 class="text-center">Copyright 2019  by <a href="http://diese.tn/">diese.tn </a></h4>
+           
+            </footer>
+        </main>
+        <!-- end of main content -->
+    </div>
+
+    <!-- The slideshow -->
+     <ul id="slideshow" data-speed="6000">
+        <li>
+            <img src="{% static 'images/baker.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/cake.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/3.jpg" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/aroma.jpg' %}"  alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/chocolate.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/berry.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/berry.jpg' %}" alt="slideshow image" />
+        </li>
+    </ul>
+    <!-- end of slideshow -->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="https://ambiance.vagebond.nl/html/template/assets/js/pack.js"></script>
+    <!-- end of scripts -->
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            var currentUrl = "http://localhost:8000/";
+
+            $('body').on('pageActivated', function() {
+                $('.back', '#wrapper').attr('href', currentUrl);
+            });
+        });
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-72227788-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

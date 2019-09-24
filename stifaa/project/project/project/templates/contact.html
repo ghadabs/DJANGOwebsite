@@ -1,0 +1,420 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>contact &middot; Stifaa</title>
+
+    <!-- mobile setup -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="Stifaa" />
+
+    <!-- stylesheet -->
+    {% comment %} <link rel="stylesheet" href="https://ambiance.vagebond.nl/html/template/assets/css/style.css"> {% endcomment %}
+    <link rel="stylesheet" type ="text/css" href= "{% static 'css/style.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> {% endcomment %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    {% comment %} <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> {% endcomment %}
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> {% endcomment %}
+    <!-- Page description -->
+    <meta name="description" content="">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="contact" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ambiance.vagebond.nl/html/template/contact/" />
+    <meta property="og:description" content="Here the excerp for this page" />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="contact" />
+    <meta name="twitter:description" content="Here the excerp for this page" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="72x72" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" sizes="50x50" href="{% static 'images/png.png' %}">
+
+</head>
+
+<body>
+
+    <!-- Top shadow -->
+    <div class="shadow"></div>
+    <!-- end top shadow -->
+
+    <!-- The splash screen -->
+    <div id="splash">
+        <div class="loader">
+            <img class="splash-logo" src="{% static 'images/png.png' %}" style="width:90px;height:50px;" />
+            <div class="line"></div>
+        </div>
+    </div>
+    <!-- End of splash screen -->
+     <nav class="social">
+        <ul>  
+           <li><a href="https://www.facebook.com/Tliligroupe/"><span>Facebook</span><i style="text-align:center" class="fa fa-facebook"></i></a></li> 
+           <li><a href="https://www.instagram.com/toutpourchef/"><span>Instagram </span><i class="fa fa-instagram"></i></a></li>
+           <li><a href="https://twitter.com/ChefPour"><span>Twitter</span> <i class="fa fa-twitter"></i></a></li>
+           <li><a href="https://linkedin.com/company/tout-pour-chef"><span>Linkedin </span><i class="fa fa-linkedin"></i></a></li>
+           <li class="mail gly-rotate-180"><a href="http://localhost:8000/contact/" data-transition="slide-to-top"><span>E-mail</span> <i class="fa fa-envelope"></i></a></li>
+           
+        </ul>
+        
+    </nav>
+
+    <div id="wrapper">
+        <!-- main content -->
+        <form  class="language"style="z-index:20" action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" >
+                <select style="width: 50%; border-color:transparent" class="badge-rounded" name="language">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option class="badge-rounded" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected {% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                </select>
+                <input  type="submit"style="border-color:transparent"  class=" badge-rounded" value="Go" />
+        </form>
+        <main>
+            <!-- The header for content -->
+         
+            <header class="detail">
+                <a href="http://localhost:8000/" class="back" data-transition="slide-from-top">
+                    <h1>back</h1>
+                </a>
+                <section>
+                    <h3 class="badge-rounded">{% trans "Contact" %}</h3>
+                    <h1>{% trans "Leave us a message" %}</h1>
+                </section>
+               
+            </header>
+            <!-- end header -->
+            <section class="content-wrap">
+                <section class="content">
+                    <i class="icon bg icon-LocationMarker"></i>
+                    <section class="info">
+                        <header>
+                            <h2>{% trans "Information" %}</h2>
+                            <h4 class="serif">{% trans "Our whereabouts" %}</h4>
+                        </header>
+                       
+                        <ul class="icon-list" style="margin-left:12%">
+                             <li>
+                                <a href="https://www.facebook.com/pg/Tliligroupe/">
+                                    <i class="fa fa-facebook"></i>
+                                    <span>Tout pour chef</span>
+                                </a>
+                            </li>
+                              <li>
+                                <a href="https://twitter.com/ChefPour">
+                                    <i class="fa fa-twitter"></i>
+                                    <span>ChefPour</span>
+                                </a>
+                            </li>
+                              <li>
+                                <a href="https://www.instagram.com/toutpourchef/?fbclid=IwAR1HUsTEqm-S41ZdwCthlEXXpAq-9Up4F779moAEaFCmTyKGf4Rwzry2D7k">
+                                    <i class="fa fa-instagram"></i>
+                                    <span>toutpourchef</span>
+                                </a>
+                            </li>
+                              <li>
+                                <a href="https://linkedin.com/company/tout-pour-chef">
+                                    <i class="fa fa-linkedin"></i>
+                                    <span>Tout pour chef</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+216 71 255 254">
+                                    <i class="fa fa-phone"></i>
+                                    <span>+216 71 255 254 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:commercial@grouptelili.com">
+                                    <i class="fa fa-envelope"></i>
+                                    <span>commercial@grouptelili.com</span>
+                                </a>
+                            </li>
+                          
+                        </ul>
+                    </section>
+                    </section>
+                    {% comment %} <button id="topbtn"><i class="fas fa-arrow-up"></i></button> {% endcomment %}
+                    <iframe  width=100% height= 700px src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3195.057372884056!2d10.178454849496505!3d36.79317478713131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd340d94193221%3A0xc9819829c8bc7bb8!2stlili+Groupe!5e0!3m2!1sfr!2stn!4v1564565392571!5m2!1sfr!2stn" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <section class="content">
+                    <section class="hours text-center" style="margin-left:40%">
+                        <header>
+                            <h2>{% trans "Opening hours" %}</h2>
+                            <h4 class="serif">{% trans "Clockwise" %}</h4>
+                        </header>
+       
+                        <div class="hours center">
+                            <time itemprop="openingHours" datetime="Monday 08:00-17:00">
+                    <strong>{% trans "Monday" %}</strong>
+                    <h3>08:00-17:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Tuesday 08:00-17:00">
+                    <strong>{% trans "Tuesday" %}</strong>
+                    <h3>08:00-17:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Wednesday 08:00-17:00">
+                    <strong>{% trans "Wednesday" %}</strong>
+                    <h3>08:00-17:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Thursday 08:00-17:00">
+                    <strong>{% trans "Thursday" %}</strong>
+                    <h3>08:00-17:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Friday 08:00-17:00">
+                    <strong>{% trans "Friday" %}</strong>
+                    <h3>08:00-17:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Saturday 08:00-14:00">
+                    <strong>{% trans "Saturday" %}</strong>
+                    <h3>08:00-14:00</h3>
+                </time>
+                            <time itemprop="openingHours" datetime="Sunday closed">
+                    <strong>{% trans "Sunday" %}</strong>
+                    <h3>{% trans "Closed" %}</h3>
+                </time>
+                        </div>
+                    </section>
+                    <section class="form-inline">
+                        <header>
+                            <h2 style="margin-left:55%">Message</h2>
+                            <br>
+                            <h4  style="margin-left:380px" class="serif">{% trans "We'd like to hear from you!"%}</h4>
+                        </header>
+                        
+                        <form style="margin-left:25%" name="myForm" method="post" id="contact-form" class="form ambiance-html-form" onsubmit="return display()">
+                            {% comment %} {{ contact_form.as_p }}   {% endcomment %}
+                            {% csrf_token %}
+                            <div class="row">
+                            <div class="col-lg-12">
+                            <input type="hidden" name="form-type" value="contact-form"> <!-- set type -->
+                            <label  for="id_name" class="serif float-left" style="color:white;">{% trans "Name:" %}</label>
+                            <br>
+                            <input type="text" name="name" placeholder="name" required  id="id_name">
+                            
+                            </div>
+                            <div class="col-lg-12">
+                             <label for="id_from_email" class="serif float-left" style="color:white;">Email:</label>
+                             <br>
+                             <input type="email" placeholder="email" name="from_email" required  id="id_from_email"><label>
+                            
+                             </div>
+                             <div class="col-lg-12">
+                             <label  class="float-left serif "style="margin-left:2px;color:white;" for="id_message" class="serif" >Message:</label>
+                             <br>
+                             <br>
+                             <textarea  class="center"name="message"  style="margin-left:-1px;width:75%" rows="10" id="id_message" required>
+                             </textarea>
+                             </div>
+                             <br>
+                             <div class="col-lg-12">
+                            <span id="message" style="color:white"></span>
+                            </div>
+                            <br>
+                            <br>
+                            <br>
+                            <div class="form-actions submit col-lg-12 float-center ">
+                                <button type="forms action submit" class="save btn btn-default " style="margin-left:30%" value="submit" >
+                                   <img src="{% static 'images/sent-mail.png' %}" style="width:30px;height:30px;">
+                                </button>
+                            </div>
+                            <div>
+                        </form>
+                    </section> 
+                    
+
+
+                <form id="newsletter" method="POST">
+                   {% csrf_token %}{% comment %} {{ NewsletterUser_form.as_p }}  {% endcomment %}
+                    <h2 class="text-center">NewsLetter</h2>
+                    <h4 class="serif text-center">{% trans "Subscribe to receive our deals and our news"%}.</h4>
+                      <label  style="margin-left:25%" class="serif center" style="color:white" for="id_email">Email:</label>
+                      <input style="margin-left:25%"class="center" type="email" name="email" maxlength="254" required id="id_email">
+                      <input type="hidden" name="form-type" value="NewsletterUser_form" width="60%"/> <!-- set type -->
+                      <button class="save btn btn-default" style="display: block; margin: -0px auto 0 auto;
+                      position: relative;background-color:transparent"  type="forms action submit" value="Submit"><span class="serif" >{% trans "Join Us" %}</span></button>
+                    </form>
+                  {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li style="text-align:center" {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                  {% endif %}
+                </section>
+              
+            </section> 
+             <footer id="copyright"><h4 class="text-center">Copyright 2019 by<a href="http://diese.tn/"> diese.tn</a></h4>
+            </footer>
+         
+         
+    </div>
+
+   
+            <!-- end of main content -->
+            
+
+    <!-- The slideshow -->
+      <ul id="slideshow" data-speed="6000">
+        <li>
+            <img src="{% static 'images/baker.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/cake.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/3.jpg" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/aroma.jpg' %}"  alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/chocolate.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/berry.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/berry.jpg' %}" alt="slideshow image" />
+        </li>
+    </ul>
+    <!-- end of slideshow -->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="https://ambiance.vagebond.nl/html/template/assets/js/pack.js"></script>
+    <!-- end of scripts -->
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            var currentUrl ="http://localhost:8000/";
+
+            $('body').on('pageActivated', function() {
+                $('.back', '#wrapper').attr('href', currentUrl);
+            });
+        });
+
+    </script>
+    <script type="application/javascript">
+    function display() {
+        var inpObj1 = document.getElementById("id_name");
+        var inpObj2 = document.getElementById("id_message");
+        var inpObj3 = document.getElementById("id_from_email");
+        if ((inpObj1.checkValidity())&&(inpObj3.checkValidity())&&(inpObj2!="")) {
+            document.getElementById("message").innerHTML = "Your email is successfully sent!";
+            return true; 
+
+            }
+            else return false;
+    } 
+
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-72227788-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+   
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-30 11:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\project\settings.py:139
+msgid "English"
+msgstr "Anglais"
+
+#: .\project\settings.py:140
+msgid "French"
+msgstr "Français"
+
+#: .\project\templates\about.html:96
+msgid "The story"
+msgstr "Notre histoire "
+
+#: .\project\templates\about.html:97
+msgid "About us"
+msgstr "A propos de nous"
+
+#: .\project\templates\about.html:106
+msgid "What we do"
+msgstr "Qu'est ce qu'on fait !"
+
+#: .\project\templates\about.html:107
+msgid "Our little story"
+msgstr "Notre petite histoire "
+
+#: .\project\templates\about.html:111
+msgid ""
+"We are founded in 1970.We are specialized in pastry and bakery products "
+"manufacturing.We hired more than 50 employees."
+msgstr ""
+"Nous sommes fondés en 1970. Nous sommes spécialisés en patisserie et "
+"boulangerie produits"
+
+#: .\project\templates\about.html:112
+msgid ""
+"Stifaa is a catalog of products and tools for your needs & innovative ideas "
+"that enrich your assets in the pastry sector."
+msgstr ""
+"Stifaa est un catalogue de produits et des outils dont vous avez besoin pour "
+"innover vos idées"
+
+#: .\project\templates\about.html:119
+msgid "Our Services"
+msgstr "Nos Services"
+
+#: .\project\templates\about.html:120
+msgid "Take a look!"
+msgstr "Jeter un coup d'oeil"
+
+#: .\project\templates\about.html:123
+msgid "Manufacturing"
+msgstr "Industrie"
+
+#: .\project\templates\about.html:124
+msgid "We make our own products with different categories."
+msgstr "Nous avons une multitudes de catégories"
+
+#: .\project\templates\about.html:128
+msgid "Selling"
+msgstr "Vendre "
+
+#: .\project\templates\about.html:129
+msgid "We sell our products with large or small quantity."
+msgstr "Nous vendons des produits en gros et en petite quantité."
+
+#: .\project\templates\about.html:134
+msgid "Delivery"
+msgstr "Livraison"
+
+#: .\project\templates\about.html:136
+msgid ""
+"We offer to our clientsfree shipping around the country to make your "
+"shopping easier."
+msgstr "Nous offrons à nos clients des livraisons gratuites"
+
+#: .\project\templates\aromalux.html:96 .\project\templates\barbara.html:96
+#: .\project\templates\index.html:160 .\project\templates\saveurs.html:95
+msgid "Brands"
+msgstr "Marques"
+
+#: .\project\templates\aromalux.html:97 .\project\templates\barbara.html:97
+#: .\project\templates\saveurs.html:96
+msgid "Discover Us!"
+msgstr "Découvrez-Nous"
+
+#: .\project\templates\aromalux.html:105 .\project\templates\barbara.html:105
+#: .\project\templates\saveurs.html:104
+msgid "Stifaa's brands"
+msgstr "Les marques de Stifaa"
+
+#: .\project\templates\aromalux.html:120
+msgid ""
+"It's one of our brand specialzes in making aroma paste and powder dye to "
+"give you an extra taste to your delights."
+msgstr ""
+"It's one of our brand specialzes in making aroma paste and powder dye to "
+"give you an extra taste to your delights."
+
+#: .\project\templates\aromalux.html:122
+msgid "Your flavors, Our work"
+msgstr "Vos saveurs , Notre métier "
+
+#: .\project\templates\barbara.html:119
+msgid ""
+"We launched ourselves as 'Barbara' in 1991 with a fascination for chocolate "
+"as a raw material. We have been designing and making chocolate decorations "
+"ever since."
+msgstr ""
+"We started ourselves as 'Barbara' in 1991 with a fascination for chocolate "
+"and raw materials."
+
+#: .\project\templates\barbara.html:121
+msgid "Quality . Technology . Design"
+msgstr "Qualité . Technologie . Designe"
+
+#: .\project\templates\contact.html:108 .\project\templates\index.html:173
+msgid "Contact"
+msgstr "Contacte"
+
+#: .\project\templates\contact.html:109
+msgid "Leave us a message"
+msgstr "Laissez-nous un message"
+
+#: .\project\templates\contact.html:119
+msgid "Information"
+msgstr "Informations"
+
+#: .\project\templates\contact.html:120
+msgid "Our whereabouts"
+msgstr "Réseaux Sociaux"
+
+#: .\project\templates\contact.html:170
+msgid "Opening hours"
+msgstr "Heures d'ouverture"
+
+#: .\project\templates\contact.html:171
+msgid "Clockwise"
+msgstr "Notre Emploi du temps"
+
+#: .\project\templates\contact.html:176
+msgid "Monday"
+msgstr "Lundi"
+
+#: .\project\templates\contact.html:180
+msgid "Tuesday"
+msgstr "Mardi"
+
+#: .\project\templates\contact.html:184
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#: .\project\templates\contact.html:188
+msgid "Thursday"
+msgstr "Jeudi"
+
+#: .\project\templates\contact.html:192
+msgid "Friday"
+msgstr "Vendredi"
+
+#: .\project\templates\contact.html:196
+msgid "Saturday"
+msgstr "Samedi"
+
+#: .\project\templates\contact.html:200
+msgid "Sunday"
+msgstr "Dimanche"
+
+#: .\project\templates\contact.html:201
+msgid "Closed"
+msgstr "Fermé"
+
+#: .\project\templates\contact.html:209
+msgid "We'd like to hear from you!"
+msgstr "Nous aimerions avoir de vos nouvelles!"
+
+#: .\project\templates\contact.html:219
+msgid "Name:"
+msgstr "Nom:"
+
+#: .\project\templates\contact.html:259
+msgid "Subscribe to receive our deals and our news"
+msgstr "Abonnez-vous pour recevoir nos offres et nos actualités "
+
+#: .\project\templates\contact.html:264
+msgid "Join Us"
+msgstr "Rejoignez-nous"
+
+#: .\project\templates\detail.html:45
+msgid "About the product "
+msgstr "A propos du produit"
+
+#: .\project\templates\detail.html:48
+msgid "Price "
+msgstr "Prix"
+
+#: .\project\templates\detail.html:52
+msgid "Brand "
+msgstr "Marques"
+
+#: .\project\templates\detail.html:58 .\project\templates\sales_detail.html:55
+msgid "OUT OF STOCK"
+msgstr "En rupture de stock"
+
+#: .\project\templates\detail.html:60 .\project\templates\sales_detail.html:57
+msgid "IN STOCK"
+msgstr "EN STOCK"
+
+#: .\project\templates\detail.html:72 .\project\templates\sales_detail.html:70
+msgid "Similar products"
+msgstr "Produits similaires"
+
+#: .\project\templates\index.html:85
+msgid "Go"
+msgstr "Aller"
+
+#: .\project\templates\index.html:121
+msgid "About"
+msgstr "A propos"
+
+#: .\project\templates\index.html:122
+msgid "Something about us"
+msgstr "Quelque chose à propos de nous"
+
+#: .\project\templates\index.html:126
+msgid "Our story"
+msgstr "Notre histoire "
+
+#: .\project\templates\index.html:127
+msgid "Read more"
+msgstr "Dicouvrez-nous"
+
+#: .\project\templates\index.html:134 .\project\templates\products.html:102
+#: .\project\templates\products.html:117 .\project\templates\sales.html:111
+msgid "Products"
+msgstr "Produits"
+
+#: .\project\templates\index.html:135
+msgid "Discover our catalog"
+msgstr "Dicouvrir notre catalogue"
+
+#: .\project\templates\index.html:139
+msgid "Our Catalog"
+msgstr "Notre Catalogue "
+
+#: .\project\templates\index.html:140
+msgid "All you need is here"
+msgstr "Tout ce dont vous avez besoin est ici"
+
+#: .\project\templates\index.html:147 .\project\templates\products.html:133
+#: .\project\templates\sales.html:96
+msgid "Sales"
+msgstr "Promotions"
+
+#: .\project\templates\index.html:148
+msgid "Good deals"
+msgstr "Bonnes affaires"
+
+#: .\project\templates\index.html:152
+msgid "Discounts"
+msgstr "des remises"
+
+#: .\project\templates\index.html:153
+msgid "And interesting offers"
+msgstr "Et des offres intéressantes "
+
+#: .\project\templates\index.html:161
+msgid "Discover more"
+msgstr "Découvrez-nous"
+
+#: .\project\templates\index.html:165
+msgid "Discover"
+msgstr "découvrir"
+
+#: .\project\templates\index.html:166
+msgid "Our brands"
+msgstr "Nos marques"
+
+#: .\project\templates\index.html:174
+msgid "Get in touch?"
+msgstr "Contactez-nou?"
+
+#: .\project\templates\index.html:178
+msgid "Leave us"
+msgstr "Laissez-nous"
+
+#: .\project\templates\index.html:179
+msgid "A message"
+msgstr "Un message"
+
+#: .\project\templates\products.html:103
+msgid "Our catalog"
+msgstr "Notre Catalogue "
+
+#: .\project\templates\products.html:133
+msgid "Our"
+msgstr "Nos"
+
+#: .\project\templates\sales.html:97
+msgid "Our Deals"
+msgstr "Nos Soldes"
+
+#: .\project\templates\sales_detail.html:44
+msgid "About the product"
+msgstr "A propos du produit"
+
+#: .\project\templates\sales_detail.html:47
+msgid "Price"
+msgstr "Prix"
+
+#: .\project\templates\saveurs.html:118
+msgid ""
+"Saveurs Tunisie specializes in the manufacture of pastry raw materials,"
+"founded in 2017."
+msgstr ""
+"Saveurs Tunisie est spécialisée dans la fabrication des matières premières "
+"de pâtisserie,fondée 2017"
+
+#: .\project\templates\saveurs.html:120
+msgid "L'art des goûts!"
+msgstr "The art of tastes!"
+
+#: .\project\urls.py:28
+msgid "admin/"
+msgstr "admin/"
+
+#: .\project\urls.py:41 .\project\urls.py:42
+msgid "STIFAA administration"
+msgstr ""
+
+#: .\project\myshop\models.py:44
+msgid "sub1"
+msgstr "sous1 "
+
+#: .\project\myshop\models.py:44
+msgid "sub2"
+msgstr "sous2"
+
+#: .\project\myshop\models.py:44
+msgid "sub3"
+msgstr "sous3"
+
+#: .\project\myshop\models.py:44
+msgid "sub4"
+msgstr "sous4"
+
+#: .\project\myshop\models.py:44
+msgid "sub5"
+msgstr "sous5"

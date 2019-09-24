@@ -1,0 +1,73 @@
+{% extends 'products.html' %} 
+{% load static %}
+{% load i18n %}
+{% block page_content %}
+
+        
+<div class="col-md-8 offset-md-2">
+    <hr>
+    <a href="http://localhost:8000/products" style="margin-top:20px;" class="back"  data-transition="slide-from-top">
+                    <h1>back</h1>
+                </a>
+    <img id="food" class="icon bg icon-Food" style="margin-left:42%;" src="{% static c.img.url %}">
+        <section>
+            <header class="with-subnav">
+                <ul>
+                    <li class="btn active ">
+                    <a href="http://localhost:8000/products/">
+                        <h4>ALL</h4>
+                    </a>
+                    </li>
+                {% for c in categories%}
+                    <li class="btn dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a href="{% url 'product_category' c.name %}" data-transition="slide-from-top">
+                            <h3>{{c.name}}</h3>
+                        </a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </header>
+        </section> 
+    <section>
+    <div class="row">
+         {% for c in categories %}
+        {% for sub in c.subcategories %}
+         {% for p in products %} 
+         {% if p.subcategory == sub %}
+         <section class="col-lg-6">
+        
+            <figure>
+
+                <a href="{% url 'product_detail' p.id %}" >
+                    <img src="{% static product.img1.url %}"  />
+                </a>
+                <figcaption>
+                <h3>{{ p.name}}</h3>
+                <p class="serif">{{ p.price}}</p>
+                                    
+                </figcaption>
+                            
+            </figure>
+           
+    {% endif %}                                           
+    {% endfor %}
+    {% endfor %}
+    {% endfor %}
+    </div>
+   </section>
+{% endblock %}
+
+{% block extra_js %} 
+ <script type="application/javascript">
+          <script type="application/javascript">
+
+        $(document).ready(function() {
+            var currentUrl = "http://localhost:8000/products/";
+            
+            $('body').on('pageActivated', function() {
+                $('.back', '#wrapper').attr('href', currentUrl);
+            });
+        });
+
+    </script>
+{% endblock extra_js %}

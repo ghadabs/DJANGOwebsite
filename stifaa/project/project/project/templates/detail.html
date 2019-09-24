@@ -1,0 +1,147 @@
+ {% extends 'products.html' %} 
+{% load static %}
+{% load i18n %}
+
+{% block extrahead %}
+<link rel="stylesheet" type ="text/css" href= "{% static 'css/style.css' %}">
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+
+{% endblock %}
+
+
+    <a href="http://localhost:8000/products" style="margin-top:20px;"   data-transition="slide-from-top">
+            <h1>back</h1>
+    </a>  
+   
+ 
+
+{% block main %}
+       {% block content %}
+       <div class="content-wrap">
+           <div class="content" width="100%">
+                
+                <img id="food" class="icon bg icon-Food center" style="margin-left:46%;" src="{% static product.category.img.url %}">
+                <div style="margin-top:5%"><h3 class="badge-rounded center" > • {% trans product.subcategory %} • {{ product.name }}</h3></div>
+
+                <div class="container center" style="margin-top:5%">
+                <div class="row">
+                    <div class="col-sm-8" width="10%" >
+
+                        <ul class="images" style="margin-left:-20%">
+                            <li><img id="1" class="rounded" style="border:solid 2px grey ; " src="{% static product.img1.url %}" alt="" width="20%"></li><br>
+                            <li><img id="2" class="rounded" style="border:solid 2px grey ; " src="{% static product.img2.url %}" alt="" width="20%"></li><br>
+                            <li><img id="3"class="rounded" style="border:solid 2px grey"src="{% static product.img3.url %}" alt="" width="20%"></li><br>
+                        </ul>
+                     <figure class="text-center" style="margin-left:15%; margin-top:-75%; width:90%" >
+                        <img  class="rounded float-center" id="image1" style="height:auto ;border:solid 2px transparent ; " src="{% static product.img1.url %}" alt=""  style="" ​ >
+                    </figure>
+                    </div>
+                   
+                    <div class="col-sm-3" style="margin-left:8%">
+                        <strong class="serif" style=" font-size:300%">{{ product.name }}</strong>
+                        <br>
+                        <h4 class="serif"style="color:white;">{% trans "About the product " %}:</h4>
+                        <p style="color:grey;">{{product.description}}</p>
+                        <br>
+                        <h5 class="serif"style="color:white;">{% trans "Price " %}:</h5>
+                        <p class="serif"style="">{{product.price}} Dt</p>
+                        <br>
+                        <br>
+                        <h5 class="serif"style="color:white;">{% trans "Brand " %}:</h5>
+                        <img src="{% static product.brand_photo.url %}" width="50%">
+                        <br>
+                        <br>
+
+                        {% if product.stock == 0 %}
+                        <h5 class="serif badge-rounded text-center" style="background-color:rgba(158, 46, 46,0.5); width:50%;text-transform:uppercase">{% trans "OUT OF STOCK" %}</h5>
+                        {% else %}
+                        <h5 class=" badge-rounded serif text-center" style="background-color:rgba(102, 153, 0, 0.5); width:50%">{% trans "IN STOCK" %}</h5>
+                        {% endif %}
+                    </div>
+                </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h2 class="serif text-center" style="color:white">{% trans "Similar products" %}</h2>
+                        <div class="similar"> 
+                            <div class="row">
+                            
+                                {% for p in products %}
+                                
+                                {% if p.category == product.category %}
+                                
+                                
+                                <figure class="col-sm-3" style="">
+
+                                    <a href="{% url 'product_detail' p.pk %}" >
+                                        <img class="card sm-2" src="{% static p.img1.url %}"  />
+                                    </a>
+                                        <figcaption  width="80%">
+                                            <h3>{{ p.name }}</h3>
+                                            <p class="serif">{{ p.price }}</p>
+                                            
+                                        </figcaption>
+                                    
+                                </figure>
+                            
+
+                                
+                                {% endif %}
+                                {% endfor %}
+                            </div> 
+                        </div>
+                                             
+{% endblock%}
+   
+            </div> 
+        </div>
+          
+{% endblock main %}
+
+{% block extra_js %}    
+<script src='js/jquery-3.4.1.min.map'>
+</script>
+<script>
+
+$(document).ready(function() {
+    var currentUrl = "http://localhost:8000/products";
+            
+     $('body').on('pageActivated', function() {
+            $('.back', '#wrapper').attr('href', currentUrl);
+        });
+    });
+    
+$(document).ready(function($){
+
+$('#1').on({
+     'click': function(){
+         $('#image1').attr('src','{% static product.img1.url %}');
+     }
+ });
+ 
+$('#2').on({
+     'click': function(){
+         $('#image1').attr('src','{% static product.img2.url %}');
+     }
+ });
+ 
+$('#3').on({
+     'click': function(){
+         $('#image1').attr('src','{% static product.img3.url %}');
+     }
+ });
+ 
+$('#4').on({
+     'click': function(){
+         $('#image1').attr('src','{% static product.img4.url %}');
+     }
+ });
+});
+
+</script>
+{% endblock extra_js %}

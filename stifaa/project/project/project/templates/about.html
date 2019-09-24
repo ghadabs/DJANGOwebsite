@@ -1,0 +1,281 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About &middot; Stifaa</title>
+
+    <!-- mobile setup -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="stifaa" />
+
+    <!-- stylesheet -->
+    {% comment %} <link rel="stylesheet" href="https://ambiance.vagebond.nl/html/template/assets/css/style.css"> {% endcomment %}
+    <link rel="stylesheet" type ="text/css" href= "{% static 'css/style.css' %}">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'> 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> {% endcomment %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Page description -->
+    <meta name="description" content="">
+
+    <!-- Facebook -->
+    <meta property="og:title" content="About" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://ambiance.vagebond.nl/html/template/about/" />
+    <meta property="og:description" content="Here the excerp for this page" />
+
+    <!-- Twitter -->
+    <meta name="twitter:title" content="About" />
+    <meta name="twitter:description" content="Here the excerp for this page" />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="72x72" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://ambiance.vagebond.nl/html/template/assets/img/favicons/apple-touch-icon-152x152.png">
+     <link rel="icon" type="image/png" sizes="50x50" href="{% static 'images/png.png' %}">
+
+</head>
+
+<body>
+
+    <!-- Top shadow -->
+    <div class="shadow"></div>
+    <!-- end top shadow -->
+
+    <!-- The splash screen -->
+    <div id="splash">
+        <div class="loader">
+            <img class="splash-logo" src="{% static 'images/png.png' %}" style="width:90px;height:50px;" />
+            <div class="line"></div>
+        </div>
+    </div>
+    <!-- End of splash screen -->
+        <nav class="social">
+        <ul>  
+           <li><a href="https://www.facebook.com/Tliligroupe/"><span>Facebook</span><i style="text-align:center" class="fa fa-facebook"></i></a></li> 
+           <li><a href="https://www.instagram.com/toutpourchef/"><span>Instagram </span><i class="fa fa-instagram"></i></a></li>
+           <li><a href="https://twitter.com/ChefPour"><span>Twitter</span> <i class="fa fa-twitter"></i></a></li>
+           <li><a href="https://linkedin.com/company/tout-pour-chef"><span>Linkedin </span><i class="fa fa-linkedin"></i></a></li>
+           <li class="mail gly-rotate-180"><a href="http://localhost:8000/contact/" data-transition="slide-to-top"><span>E-mail</span> <i class="fa fa-envelope"></i></a></li>
+           
+        </ul>
+        
+      </nav>
+    <div id="wrapper">
+      <form  class="language"style="z-index:20" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <input name="next" type="hidden" value="{{ redirect_to }}" >
+                <select style="width: 50%; border-color:transparent" class="badge-rounded" name="language">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option class="badge-rounded" value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                           <h6 class="serif" style="color: white;"> {{ language.name_local }} ({{ language.code }})</h6>
+                        </option>
+                    {% endfor %}
+                </select>
+                <input  type="submit"style="border-color:transparent"  class=" badge-rounded" value="Go" />
+      </form>
+        <!-- main content -->
+        <main>
+            <!-- The header for content -->
+            <header class="detail">
+                <a href="http://localhost:8000/" class="back" data-transition="slide-from-top">
+                    <h1>back</h1>
+                </a>
+                <section>
+                    <h3 class="badge-rounded">{% trans "The story" %}</h3>
+                    <h1>{% trans "About us" %}</h1>
+                </section>
+            </header>
+            <!-- end header -->
+            <div class="content-wrap">
+                <div style="width:100%;" class="content">
+                    <i class="icon bg icon-chat"></i>
+                    <section>
+                        <header>
+                            <h2>{% trans "What we do" %}</h2>
+                            <h4 class="serif">{% trans "Our little story" %}</h4>
+                        </header>
+
+                        <section>
+                            <p>{% trans  "We are founded in 1970.We are specialized in pastry and bakery products manufacturing.We hired more than 50 employees."%}
+                           {% trans "Stifaa is a catalog of products and tools for your needs & innovative ideas that enrich your assets in the pastry sector." %}</p>
+                        </section>
+                    </section>    
+                        <video width="100%" src="{% static 'videos/chocolat.mp4' %}" autoplay  muted loop>
+                        </video>
+                    <section>   
+                        <header>
+                            <h2>{% trans "Our Services" %}</h2>
+                            <h4 class="serif">{% trans "Take a look!" %}</h4>
+                        </header>
+                         <section>
+                            <h3>{% trans "Manufacturing" %}</h3>
+                            <p>{% trans "We make our own products with different categories." %}</p>
+                             <div class="col-12"><img src="{% static 'images/warehouse.png' %}" style="width:130px; height:130px; position:relative;top:120%;left:70%"></div>
+                        </section>
+                           <section>
+                            <h3>{% trans "Selling" %}</h3>
+                            <p>{% trans "We sell our products with large or small quantity." %}</p>
+                            <div class="col-12"><img src="{% static 'images/worker.png' %}" style="width:130px; height:130px; position:relative;top:120%;left:70%"></div>
+                            <div>
+                        </section>
+                          <section>
+                            <h3>{% trans "Delivery" %}</h3>
+                            <div class="rows">
+                            <p class="col-12">{% trans "We offer to our clientsfree shipping around the country to make your shopping easier." %}</p>
+                            <div class="col-12"><img src="{% static 'images/delivery.png' %}" style="width:130px; height:130px; position:relative;top:120%;left:70%"></div>
+                            <div>
+                        </section>
+                    </section>
+                </div>
+            </div>
+            <div data-remodal-id="modal">
+                <i class="icon bg icon-chat"></i>
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h1></h1>
+                <p></p>
+               
+            </div>  
+            <footer id="copyright"><h4 class="text-center">Copyright 2019  by<a href="http://diese.tn/"> diese.tn</a></h4>
+            
+            </footer>
+        </main>
+      
+        <!-- end of main content -->
+    </div>
+
+    <!-- The slideshow -->
+   <ul id="slideshow" data-speed="6000">
+        <li>
+            <img src="{% static 'images/baker.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/cake.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="https://ambiance.vagebond.nl/html/template/assets/img/slideshow/restaurant/3.jpg" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/aroma.jpg' %}"  alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/chocolate.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/berry.jpg' %}" alt="slideshow image" />
+        </li>
+        <li>
+            <img src="{% static 'images/berry.jpg' %}" alt="slideshow image" />
+        </li>
+    </ul>
+    <!-- end of slideshow -->
+
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="https://ambiance.vagebond.nl/html/template/assets/js/pack.js"></script>
+    <!-- end of scripts -->
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            var currentUrl = "http://localhost:8000/";
+            
+            $('body').on('pageActivated', function() {
+                $('.back', '#wrapper').attr('href', currentUrl);
+            });
+        });
+    
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-72227788-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
